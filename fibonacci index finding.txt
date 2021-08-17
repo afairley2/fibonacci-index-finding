@@ -1,0 +1,72 @@
+using System;
+//This program is used to find index of given Fibonacci number
+ 
+class Fibonacci 
+{
+  
+ 
+static int findIndex (int n) 
+  {
+    
+ 
+ 
+      // if Fibonacci number is less than 2, its index will be same as number
+      if (n <= 1)
+      
+ 
+return n;
+    
+ 
+ 
+int a = 0, b = 1, c = 1;
+    
+ 
+int res = 1;
+    
+ 
+ 
+      // iterate until generated Fibonacci number is less than given Fibonacci number
+      
+while (c < n)
+      
+ 
+      {
+	
+ 
+c = a + b;
+	
+ 
+ 
+	  // res keeps track of number of generated Fibonacci number
+	  res++;
+	
+ 
+a = b;
+	
+ 
+b = c;
+      
+ 
+}
+    
+ 
+ 
+return res;
+  
+ 
+}
+  
+ 
+ 
+ 
+public static void Main () 
+  {
+    
+ 
+int result = findIndex (1000);	//Find the index with the first 4 digit number
+    
+Console.WriteLine (result);
+
+ 
+} 
+} 
